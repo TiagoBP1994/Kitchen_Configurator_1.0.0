@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <!-------------- 
+    nmlCanvas76.html
+    ---------------->
+    
+    
+    <head>
+        <meta charset="utf-8"/>
+        <title>Kitchen Configurator</title>
+        <script src="nQuery.js"></script>
+        <script src="nmlCanvas.js"></script>
+        <script src="nmlShape.js"></script>
+        <script src="fiddle.js"></script>
+        <link rel="stylesheet" href="Style/Style.css">
+    
+     <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+}
+    </style>
+    </head>
+    
+<!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NAVIGATION BAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!>            
+    
+    <body background="Images/Kitchen_BC.jpg">
+         <div class="topnav">
+            <h1 align="center" style="color: #4caf50">KI-ZZLE</h1>
+            <a href="index_1.html">Home</a>
+            <a class="active" href="index.html">Configurator</a>
+        </div>
+        
+            
+<!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CREATE TWO OBJECTS WHICH ARE PLACED INTO AN ARRAY AND DRAW FROM ARRAY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!>
+
+        
+<div class="items">
+        <ul id="itemList">
+        </ul>
+    </div>
+        
+        <canvas id="canvas" width="900" height="700" 
+                style="margin-left: 275px; margin-top: 25px; outline: 3px solid black;" >
+            <p>Powered by &html;5 canvas</p>
+        </canvas>
+        
+
+
+<!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Print PRICE FROM ARRAY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!>
+
+
+<div style="background-color:#333; text-align:center; vertical-align: middle; width: 700px; padding-bottom: 20px; padding-top: 47px ; margin-top: 25px;
+     margin-left: 600px;"> 
+    
+
+    <p class="p">Click the button to get the total cost of the kitchen furniture.</p>
+                <button  onclick="myFunction()">Total Price</button>
+                <p class="p">The total price is: <span id="demo"></span></p>
+
+            
+            <script>
+                var numbers = [123, 456, 789, 178];
+
+                function getSum(total, num) {
+                    return parseInt(total) + parseInt(num) + "$"; // In order to print both numbers and string i need to parse 
+                }
+                function myFunction(item) {
+                    document.getElementById("demo").innerHTML = numbers.reduce(getSum);
+                }
+            </script>
+</div>
+
+
+<!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Print PRICE FROM ARRAY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!>
+
+
+        
+        <div class="text">
+            <button id="b1">Move the Wall Mounted Ibiza</button>
+            <button id="b2">Move the Wall Mounted Paris</button>
+            <button id="b3">Move the Floor Mounted Mahogany</button>
+            <button id="b4">Move the Floor Mounted Beaver</button>
+            </div>
+
+
+
+
+    
+    <div class="footer">
+            <p>Copy right by - <a style="color: #f2f2f2" href="http://www.jwshub.net">JWS HUB</a></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+{
+    "name": "Kitchen_Configurator_Version_1.0.0",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "tprat",
+    "contributors": [],
+    "dependencies": {}
+}
